@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int n;
+int main()
+{
+	scanf("%d",&n);
+	
+	for(int i=1; i <= n; i++)  // nÁÙ Âï±â  
+	{
+		for(int j=i+1; j<=n; j++)  // n-1¸¸Å­ °ø¹é Âï±â  
+		{
+			
+			printf(" ");
+			
+		}
+		for(int j=1;j<=i;j++)    // 1ºÎÅÍ~ n ¸¸Å­ º° Âï±â  
+		{
+			printf("*");
+		}
+		
+		printf("\n");
+		
+	}
+
+}
