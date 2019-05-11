@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+
+	char s[100];
+	scanf("%s",s);
+	for(int i =0; s[i] != NULL; i++)
+	{
+		printf("%c",s[i]);
+		if(i%10==9)
+		{
+			printf("\n");
+		}
+		
+	}
+}
+
