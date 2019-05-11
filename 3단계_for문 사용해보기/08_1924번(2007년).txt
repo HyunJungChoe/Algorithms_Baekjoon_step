@@ -1,0 +1,56 @@
+
+
+<!--- 풀이 1---!> ★★★
+
+#include <stdio.h>
+
+int main(void) {
+    int x, y, i, month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    scanf(" %d %d", &x, &y);
+    for(i=0 ; i<x-1 ; i++) y += month[i];
+    switch(y%7) {
+        case 0 : printf("SUN"); break;
+        case 1 : printf("MON"); break;
+        case 2 : printf("TUE"); break;
+        case 3 : printf("WED"); break;
+        case 4 : printf("THU"); break;
+        case 5 : printf("FRI"); break;
+        case 6 : printf("SAT"); break;
+    }
+    return 0;
+}
+
+/*
+1월1일은 월요일 이기 때문에 1월은 받은 y그대로 계산하지만
+2월~12월은 받은 y에 + 지난달 일수를 더해 주어야 한다. (그래야 요일이 자연스럽게 흐른다. )
+ 즉, for(i=0 ; i<x-1 ; i++) y += month[i]; 문장으로 전 달의 요일수를 모두 더해준다.
+*/
+
+<!--- 풀이 2---!>
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int x,y,cnt;
+int m[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+string s[7] = {"MON","TUE","WED","THU","FRI","SAT","SUN"};
+
+int main()
+{
+	cin >> x>>y;
+	for(int i =1; i <x; i++)
+	{
+		cnt = (cnt+m[i]%7);
+		
+	}
+	cnt =cnt +y+6;
+	cnt%=7;
+	cout << s[cnt];
+	
+}
+
+
+
+
+// 보통 string 배열을 입출력으로 쓰기 위해 #include<iostream> 을 쓴다.  
